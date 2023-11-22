@@ -49,9 +49,7 @@ async def word_generator():
     return word
 
 
-class Input(BaseModel):
-    query: str
-    stream: bool
+
 
 # input_queue = asyncio.Queue()  # Queue to hold incoming messages
 
@@ -161,8 +159,6 @@ async def usage(request: Request):
         "cpu": psutil.cpu_percent(),
         "ram": psutil.virtual_memory().percent,
         
-        # "resources": check_resources()
-
     }
 
 
@@ -172,4 +168,3 @@ if __name__ == "__main__":
 
 
 
-# TO run the file, run the following commmand in the terminal : uvicorn post_routes10:app --host localhost --port 8000
