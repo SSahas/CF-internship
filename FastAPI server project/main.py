@@ -44,12 +44,14 @@ async def word_generator():
 
     word = await get_random_word()
     print(word)
-    time_gap = random.uniform(0, 1)
+    time_gap = random.uniform(0, 0.5)
     await asyncio.sleep(time_gap)
     return word
 
 
-
+class Input(BaseModel):
+    query: str
+    stream: bool
 
 # input_queue = asyncio.Queue()  # Queue to hold incoming messages
 
@@ -107,7 +109,7 @@ async def get_answers(input_queue=None):
     count = 0
     final_value = ""
 
-    while count < 5:
+    while count < 500:
         message_word = await word_generator()
         if input_queue:
             await input_queue.put((False, message_word))
@@ -137,7 +139,8 @@ async def get_response(stream):
 
 @app.get('/question')
 async def message_stream(request: Request, data: Input):
-    
+
+    client_id = str(uuid.uuid4())
 
     response = await get_response(stream=bool(data.stream))
 
@@ -158,12 +161,14 @@ async def usage(request: Request):
     return {
         "cpu": psutil.cpu_percent(),
         "ram": psutil.virtual_memory().percent,
-        
+
+        # "resources": check_resources()
+
     }
 
 
 if __name__ == "__main__":
-    
+
     uvicorn.run(app, host="localhost", port=8000)
 
 
