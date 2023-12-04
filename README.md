@@ -16,7 +16,7 @@ Built an fastapi server for which the users can send request and can get the dat
 3. Run the js_server.js file and make a get request to -`http://localhost:3000/get-data` in postman or any other api testing platform.
 4. stream output is produced in postman and also in the terminal in  which js_server.js is running.
    
-## libraries to run main.py 
+## Libraries to run main.py 
 - fastapi
 - pydantic
 - uvicorn
