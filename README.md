@@ -23,3 +23,7 @@ Built an fastapi server for which the users can send request and can get the dat
 - sse-starlette
 - psutil
 - uuid
+
+## Libraries to run js_server.js
+- express
+- axios
