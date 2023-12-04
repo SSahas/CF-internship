@@ -1,6 +1,6 @@
 # CF-internship
 
-Built an fastapi server for which the users can send request and can get the data in the form of stream like chatgpt.
+Built an fastapi server for which the users can send request and can get the data in the form of stream like chatgpt.The FastAPI server was built using asyncronous programming for efficient use of resources and fast responses.
 
 ## Tech stack
 
