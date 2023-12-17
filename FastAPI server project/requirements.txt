@@ -1,0 +1,6 @@
+fastapi
+pydantic
+uvicorn
+sse-starlette
+psutil
+uuid
