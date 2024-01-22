@@ -1,6 +1,6 @@
 # CF-internship
 
-Built an fastapi server for which the users can send request and can get the data in the form of stream, like chatgpt.The FastAPI server was built using asyncronous programming ([asyncio](https://docs.python.org/3/library/asyncio.html)) for efficient use of resources and fast responses. 
+Built an fastapi server for which the users can send request and can get the data in the form of stream, like chatgpt.The FastAPI server was built using asyncronous programming ([asyncio](https://docs.python.org/3/library/asyncio.html)) for efficient use of resources and fast responses. I did this project to improve my skills to become ml engineer. 
 
 ## Tech stack
 
